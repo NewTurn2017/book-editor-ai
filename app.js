@@ -278,7 +278,7 @@ function updateProgress() {
         id => userAnswers[id].selectedOption
     ).length;
     
-    const progressFill = document.getElementById('progressFill');
+    const progressFill = document.getElementById('progressBar');
     const progressCount = document.getElementById('progressCount');
     const analyzeBtn = document.getElementById('analyzeBtn');
     
