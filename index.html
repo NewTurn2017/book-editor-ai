@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 AI 출판 기획 질문지</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">📚 AI 출판 기획 질문지</h1>
+                <p class="subtitle">당신의 책 이야기를 들려주세요 ✨</p>
+            </div>
+        </header>
+
+        <!-- Introduction -->
+        <div class="intro-card">
+            <div class="intro-icon">💭</div>
+            <p class="intro-text" id="introText"></p>
+            <p class="intro-purpose" id="purposeText"></p>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-header">
+                <span class="progress-label">진행률</span>
+                <span class="progress-count" id="progressCount">0/10</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Questions Container -->
+        <div class="questions-container" id="questionsContainer">
+            <!-- Questions will be dynamically loaded here -->
+        </div>
+
+        <!-- AI Analysis Button -->
+        <div class="analysis-section">
+            <button class="analyze-btn" id="analyzeBtn" disabled>
+                <span class="btn-icon">🤖</span>
+                <span class="btn-text">AI 종합 분석 받기</span>
+            </button>
+        </div>
+
+        <!-- AI Analysis Result -->
+        <div class="analysis-result hidden" id="analysisResult">
+            <div class="result-header">
+                <h2 class="result-title">🎯 AI 종합 분석 결과</h2>
+            </div>
+            <div class="result-content" id="resultContent">
+                <!-- AI analysis will be displayed here -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>✨ AI 에디터와 함께하는 출판 여정 ✨</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
