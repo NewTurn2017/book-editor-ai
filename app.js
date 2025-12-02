@@ -431,8 +431,18 @@ async function performClaudeAnalysis() {
     });
     
     if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(`API error: ${response.status} - ${errorData.error}`);
+        const contentType = response.headers.get("content-type");
+        let errorMessage;
+        
+        if (contentType && contentType.indexOf("application/json") !== -1) {
+            const errorData = await response.json();
+            errorMessage = errorData.error || JSON.stringify(errorData);
+        } else {
+            const text = await response.text();
+            errorMessage = `Status ${response.status}: ${text.substring(0, 100)}...`;
+        }
+        
+        throw new Error(`API error: ${errorMessage}`);
     }
     
     const data = await response.json();
