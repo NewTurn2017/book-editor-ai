@@ -309,7 +309,7 @@ async function performAIAnalysis() {
     
     // Disable button and show loading state
     analyzeBtn.disabled = true;
-    analyzeBtn.innerHTML = '<span class="btn-icon">⏳</span><span class="btn-text">AI 분석 중...</span>';
+    analyzeBtn.innerHTML = '<span class="btn-text">AI 분석 중...</span>';
     
     // Try to use Claude API (via serverless function), fallback to rule-based analysis
     let analysis;
@@ -331,7 +331,6 @@ async function performAIAnalysis() {
     resultContent.innerHTML = `
         <div class="result-section">
             <h3 class="result-section-title">
-                <span class="result-section-icon">📚</span>
                 당신의 책 프로필
             </h3>
             <div class="result-section-content">
@@ -341,7 +340,6 @@ async function performAIAnalysis() {
         
         <div class="result-section">
             <h3 class="result-section-title">
-                <span class="result-section-icon">🎯</span>
                 핵심 메시지
             </h3>
             <div class="result-section-content">
@@ -351,7 +349,6 @@ async function performAIAnalysis() {
         
         <div class="result-section">
             <h3 class="result-section-title">
-                <span class="result-section-icon">✨</span>
                 추천 제목 아이디어
             </h3>
             <div class="result-section-content">
@@ -363,7 +360,6 @@ async function performAIAnalysis() {
         
         <div class="result-section">
             <h3 class="result-section-title">
-                <span class="result-section-icon">👥</span>
                 타겟 독자
             </h3>
             <div class="result-section-content">
@@ -373,7 +369,6 @@ async function performAIAnalysis() {
         
         <div class="result-section">
             <h3 class="result-section-title">
-                <span class="result-section-icon">🎨</span>
                 추천 문체 및 톤
             </h3>
             <div class="result-section-content">
@@ -383,7 +378,6 @@ async function performAIAnalysis() {
         
         <div class="result-section">
             <h3 class="result-section-title">
-                <span class="result-section-icon">📖</span>
                 유사 도서 스타일
             </h3>
             <div class="result-section-content">
@@ -393,7 +387,6 @@ async function performAIAnalysis() {
         
         <div class="result-section">
             <h3 class="result-section-title">
-                <span class="result-section-icon">💡</span>
                 다음 단계 추천
             </h3>
             <div class="result-section-content">
@@ -408,7 +401,7 @@ async function performAIAnalysis() {
     analysisResult.classList.remove('hidden');
     
     // Reset button
-    analyzeBtn.innerHTML = '<span class="btn-icon">🤖</span><span class="btn-text">AI 종합 분석 받기</span>';
+    analyzeBtn.innerHTML = '<span class="btn-text">AI 종합 분석 받기</span>';
     
     // Scroll to result
     analysisResult.scrollIntoView({ behavior: 'smooth', block: 'start' });
