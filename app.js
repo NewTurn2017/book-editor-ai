@@ -510,9 +510,6 @@ function extractList(text, startPattern, endPattern) {
     
     return items.length > 0 ? items : null;
 }
-    
-    return items.length > 0 ? items : null;
-}
 
 // Analyze answers and generate insights
 function analyzeAnswers() {
